@@ -1,0 +1,820 @@
+@media only screen and (max-width: 7680px) {
+/* Website Hintergrund start */
+body {
+	background-color: black;
+    color: white;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+    margin: 0vw;
+    padding: 0vw;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-family: "fantasy", sans-serif;
+    background-position: center;
+    background-size: cover;
+	max-width: 3840px;
+}
+
+header, footer {
+    flex: 15%;
+	background-color: black;
+    color: white;
+    text-align: center;
+	overflow-x: hidden;
+}
+
+main {
+    flex: 70%;
+	overflow-x: hidden;
+}
+
+/*---------------Navi start------------------------*/
+.navig1 {
+  position: fixed;
+  background-color: black;
+  height: 3.5vh;
+  left: 0;
+  width: 100vw;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navig1 .LogoL {
+  float: left;
+  width: 10vw;
+  height: 3.5vh;
+}
+
+.navig1 .LINKS {
+  float: left;
+  width: 60vw;
+  height: 3.5vh;
+}
+
+.navig1 img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 7vw;
+    height: 3.5vh;
+}
+
+.navig1 .container {
+  width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navig1 .container .svg-container1 {
+  width: 50%;
+  height: 3.5vh;
+}
+
+.navig1 .container .svg-container2 {
+  width: 50%;
+  height: 3.5vh;
+}
+
+.navig1 .container .svg-container2 img {
+  width: 9vw;
+  height: 3vh;
+  cursor: pointer;
+}
+
+.navig1 > div {
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+}
+
+.navig1 > div:first-child {
+  gap: 10px;
+}
+
+.navig1 > div.active:after {
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  height: 3px;
+  border-radius: 99px;
+}
+/*----------------------------------------------------------------------------*/
+
+
+.element {
+    transition: transform 0.3s ease;
+}
+
+.HelluDunkel {
+  width: 100%;
+  height: 3.5vh;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+ } 
+.HelluDunkel:after {
+    content: 'dark';
+    color: #000;
+    position: absolute;
+    right: 11.5vw;
+    z-index: 0;
+    font: 1vw Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+   }
+.HelluDunkel:before {
+    content: 'light';
+    color: white;
+    position: absolute;
+    left: 9.5vw;
+    z-index: 0;
+    font: 1vw Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+.HelluDunkellabel {
+    display: block;
+    width: 7vw;
+    height:  3vh;
+    cursor: pointer;
+    position: absolute;
+    left: 7.5vw;
+    z-index: 10;
+    background: white;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+	transform: translateY(-1.5vw);
+}
+
+input[type=checkbox] {
+    visibility: hidden;}
+   input:checked + .HelluDunkellabel {
+	  left: 0.5vw;
+	  transform: translateY(-1.8vw);
+}    
+
+.LINKS a {
+  	font-size: 2vw;
+	color: white;
+	margin-right: 1vw;
+	font-family: fantasy;
+	text-decoration: none;
+}
+
+.LINKS2 a {
+  	font-size: 1vw;
+	color: white;
+	margin-right: 1vw;
+	font-family: fantasy;
+	text-decoration: none;
+}
+
+.LINKS2 {
+	float: left;
+}
+
+.aktiv 
+{
+    animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  from {
+     opacity: 0;
+  }
+  to {
+     opacity: 1;
+  }
+} 
+
+.Navi2 {
+    text-align: left;
+    background-color: black;
+    width: 100vw;
+    bottom: 0vh;
+    height: 10vh;
+    font-size: 1.5vh;
+    overflow: hidden;
+    z-index: 200;
+    position: fixed;
+}
+
+/*------------------Navi-ende-------------------------*/
+
+/*------------------Login-start-------------------------*/
+
+#loginButton,
+#loginButton:after {
+	width: 13vw;
+    height: 3.5vh;
+	font-size: 1vw;
+	font-family: 'Bebas Neue', sans-serif;
+	background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+	border: 0;
+	color: #fff;
+	letter-spacing: 3px;
+	outline: transparent;
+	position: relative;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+#loginButton:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'abonnieren';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+#loginButton:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+/*----------------Login-Button-----------------------------*/
+
+#bewertungButton {
+    width: 100vw;
+    height: 6vh;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3vw;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ff013c;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#bewertungButton:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+/*--------------Bewerten-Button--------------------------------*/
+/*----------------------Button--------------------------------*/
+
+#loginPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#loginContent h2{
+	text-align-last: center;
+    color: black;
+    font-family: sans-serif;
+    background-color: white;
+    line-height: 0.5;
+    font-size: 3.5vw;
+    margin: 0%;
+	padding: 5vh 0vh;
+}
+  
+#registerContent{
+	display:none;
+}  
+
+#registerContent h2{
+	text-align-last: center;
+    color: black;
+    font-family: sans-serif;
+    background-color: white;
+    line-height: 0.5;
+    font-size: 3.5vw;
+    margin: 0%;
+	padding: 5vh 0vh;
+}
+
+
+/* Styles für die Tabs */
+.tab {
+    cursor: pointer;
+    padding: 10px;
+	color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tab.active {
+	color: white;
+    background-color: black;
+    border-bottom: 1px solid #fff;
+}
+/*-------------------------login-ende---------------------*/
+
+/*------------------Bewertung-start-------------------------*/
+
+#bewertungButton{
+	font-size: xxx-large;
+	width: 100vw;
+    height: 14vh;
+    border-bottom: inset;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all ease 2s;
+}
+
+#BewertungPopup {
+	top: 0vh;
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.labelcheck{
+	position: relative;
+	margin-right: 10vw;
+    font-size: 3vw;
+    background: none;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparentes Overlay */
+    z-index: 999; /* Stellen Sie sicher, dass das Overlay über allem anderen liegt */
+    display: none; /* Startet ausgeblendet */
+}
+
+
+/* Styles für die Tabs */
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+/*-----------------------Bewertung-ende---------------------*/
+
+/*------------------youtube start-------------------------*/
+
+.sozial{
+	width: 100%; 
+}
+
+.youtubeGP{
+	width: 100%;
+	text-align: center;
+}
+
+.youtubevideo2 {
+    width: 100vw;
+    height: 50vh;
+}
+/*------------------youtube ende-------------------------*/
+
+
+/*------------------gamepage start-------------------------*/
+.Bildericon img{
+	width: 3vw;
+    height: auto;
+    float: left;
+    display: inline-block;
+    margin-right: 1vw;	
+}
+
+
+.youtube{ position: static; background-color: black; width: 100vw; padding-top: 5%;}
+.ElogoL{ display:none;}
+.YoutubeVideoGP { width: 300px; height: 250px; display: flex; align-items: center; justify-content: center;}
+.ElogoR{display:none;}
+#Black{margin:0; padding:0; dispaly: flex; justify-content: center; align-items: center; min-height: 1em; width:100%; background-color: transparent; font-family: 'Poppins', sans-serif;}
+.GameBoxAus1, .GameBoxAus2, .GameBoxAus3, .GameBoxAus4{
+	text-align: center;
+	border-bottom-style: groove;
+    width: 100%;
+	height: 13vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.GameBox1,
+.GameBox2{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+}
+
+.GameBox3,
+.GameBox4,
+.GameBox5,
+.GameBox6{
+    width: 25%;
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+}
+
+.GameBox7, .GameBox8, .GameBox9{
+    width: 33%;
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+}
+
+.GameBox10{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+}
+
+.Titel {
+    position: relative;
+    padding: 0px;
+}
+.GameBox:hover .Titel h1{ top: -30px; color: #03E8FE; font-size: 3vw; }
+.GameBox .Titel p{ margin:0; padding:0; font-size:15px; color: #fff;}
+.GameBox .Titel a{ position: relative; font-size: 1.2em;  margin: 0px; padding:0; text-decoration: none;  display: inline-block; color: #fe0000; transition: 0.5s; transform: translateY(-40px); opacity: 0; visibility: hidden;}
+.GameBox:hover .Titel a{ margin:0; transform: translateY(0); opacity: 1; visibility: visible;  }
+.GameBox .Titel a:hover{  color:black; background: #fff;}
+.Titel h1{ margin:0; padding:0; font-size: 2.5vw; color: rgba(47, 202, 190, 1); transition: 0.5s;}
+.Titel h4{ margin:0; padding:0; font-size: 1.5vw; color: rgba(47, 202, 190, 1); transition: 0.5s;}
+.Titel h2, .Titel h3, .Titel h6{ text-align: center; margin: 0px; padding:0; font-size: xxx-large; font-weight: bold; color: #fff;}
+.Titel h5{text-align: center; height: auto; width: 33vw; margin:0; padding:0; font-size: 1vw; color: rgba(47, 202, 190, 1); transition: 0.5s;}
+
+/*------------------gamepage ende-------------------------*/
+
+.GameOut{position:relative; float: left; }
+.GameOut .GameIn {position:relative; width:320px; height:81px; margin:50px; background: black; border-radius: 45px;}
+.GameOut .GameIn .Gbild{ position:absolute; top:90%; left:25%; max-width:210px;}
+.GName{ color: white; text-align: center; font-size: 25px;}
+.GameIn img:hover{ animation: perspect 4s infinite linear }@keyframes perspect {0% {transform:perspective(300px) rotateY(0deg)}25% {transform:perspective(300px) rotateY(90deg)}50% {transform:perspective(300px) rotateY(180deg)}75% {transform:perspective(300px) rotateY(270deg)}100% {transform:perspective(300px) rotateY(360deg)}}
+#Gaus h1{width: 100%; font-size: 0.8em;}
+#Gaus h3{width: 270px; font-size: 0.8em; margin: 45px 0px 0px 0px;}
+
+a.Gbild img{
+	width: 4em;
+    height: 5em;
+	margin: 0;
+    float: left;
+}
+
+#Gaus, #Gaus1{
+	width:80%;
+	color: white;
+    margin: 2vw 0vw 0vw 0vw;
+    height: auto;
+	fill:none;
+	stroke:#191919;
+	stroke-width: 1;
+	stroke-linecap:round;
+    float: left;
+}
+
+.Gamebeschreibung{margin: -30px 20%;} 
+
+.Gamebewertung {margin: 0% 0 50px;}
+
+#disqus_thread{
+	margin: 0px;
+    width: 100%;
+}
+
+.YTBUTTON2{
+	display: none;
+}
+
+/*-------------------Scrollbar-------------------------*/
+  ::-webkit-scrollbar {
+    background: blue;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: red;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background: black;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, green);
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: black;
+  }
+ /*-------------------Scrollbar-------------------------*/
+}
+
+/*------------------------------------------------------*/
+@media only screen and (max-width: 3840px) {
+}
+/*------------------------------------------------------*/
+
+
+@media only screen and (max-width: 2560px) {
+
+.navig1 img {
+    width: 5vw;
+}
+
+.LOGO{
+    width: 20vw;
+    height: 25vh;
+}
+	
+.LOGO2{
+    width: 20vw;
+    height: 25vh;
+}
+
+.Navi2 {
+    height: 11vh;
+}
+
+
+}
+
+/*-------------------------------------------------------*/
+
+@media only screen and (max-width: 1920px) {
+
+#bewertungButton {
+    font-size: x-large;
+}
+
+.Titel h2, .Titel h3, .Titel h6 {
+    font-size: xx-large;
+}
+	
+.Navi2 {
+    height: 10.5vh;
+}
+	
+}
+
+/*-------------------------------------------------------*/
+
+@media only screen and (max-width: 1440px) {
+
+.YTBUTTON{
+	display: none;
+}
+  
+.YTBUTTON2{
+	display: block;
+}
+
+.yt-uix-button.yt-uix-button-subscribe-branded, .yt-uix-button.yt-uix-button-subscribed-branded {
+    padding: 0 6px 0 2.5px;
+    height: 15px;
+} 
+  
+}
+/*-------------------------------------------------------*/
+
+
+@media only screen and (max-width: 1366px) {
+
+.navig1 img {
+    width: 5vw;
+}
+
+.Navi2 {
+    height: 10vh;
+}
+
+.Titel h2, .Titel h3, .Titel h6 {
+    font-size: large;
+}
+
+.Titel h1, .Titel h4 {
+    font-size: large;
+	overflow-wrap: anywhere;
+}
+
+.Titel h5 {
+    font-size: small;
+}
+
+}
+
+/*-------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+
+.youtubevideo2 {
+    width: 72vw;
+    height: 30vh;
+}
+
+.Bildericon img {
+    width: 6vw;
+}
+	
+.navig1 > div {
+	font-size: 2vw;
+}
+
+.HelluDunkel:after {
+	right: 9.5vw;
+    font: 1.5vw sans-serif;
+}
+
+.HelluDunkel:before {
+	left: 9.5vw;
+    font: 1.5vw sans-serif;
+}
+  
+.HelluDunkellabel {
+	transform: translateY(-2.5vw);
+}
+
+input[type=checkbox] {
+    visibility: hidden;}
+   input:checked + .HelluDunkellabel {
+	  left: 0.5vw;
+	  transform: translateY(-2.5vw);
+}
+
+.LOGO{
+	width: 45vw;
+    height: 20vh; 
+}
+
+.LOGO2{
+	width: 45vw;
+    height: 20vh; 
+}
+
+.Navi2 {
+    height: 10.5vh;
+}
+
+#bewertungButton {
+    font-size: smaller;
+}
+
+}
+
+/*-------------------------------------------------------*/
+
+@media only screen and (max-width: 360px) {
+
+.navig1 img {
+    width: 11vw;
+}
+
+.YTBUTTON{
+	display: none;
+}
+
+.LOGO{
+	width: 60vw;
+    height: 15vh; 
+}
+
+.LOGO2{
+	width: 80vw;
+    height: 15vh; 
+}
+
+.nav{
+	left: 27vw;
+	bottom: 88vh;
+}
+
+.nav2{
+	left: 26vw;
+	bottom: 1vh;
+}
+
+.HelluDunkellabel {
+    transform: translateY(-4.5vw);
+}
+
+.Bildericon img {
+    width: 6vw;
+}
+
+input:checked + .HelluDunkellabel {
+    transform: translateY(-4.5vw);
+}
+
+.Titel h2, .Titel h3, .Titel h6 {
+    font-size: x-small;
+}
+
+.Titel h1, .Titel h4 {
+    font-size: 3vw;
+}
+
+.Titel h5 {
+    font-size: 2vw;
+}
+
+.LINKS2{
+	font-size: 2.5vw;
+	text-align: left;
+}
+
+.Navi2 {
+    height: 10vh;
+	font-size: 1.5vh;
+}
+
+}
+
+/*-------------------------------------------------------*/
